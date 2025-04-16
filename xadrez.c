@@ -32,9 +32,9 @@ printf("\n movendo o cavalo\n");
 while (movecavalo--)
 {
     for(int i = 0; i < 2; i++){
-        printf("Baixo\n"); //imprime paracima 2x
+        printf("Baixo\n"); //imprime para baixo 2x
     }
-        printf("Direita\n"); //imprime para direitra 1x
+        printf("Direita\n"); //imprime para direita 1x
 }
 return 0;
 
