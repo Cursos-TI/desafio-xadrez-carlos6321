@@ -5,7 +5,7 @@ int torre = 0, bispo = 0, rainha = 0;
 int movecavalo = 1;
 
 //move a torre 5 casas a direita
-printf("Movendo a Torre\n");
+printf("\n Movendo a Torre\n");
 for (torre = 0; torre <5; torre++) {
     printf("Direita\n");
 }
@@ -19,9 +19,9 @@ while (bispo < 5)
 }
 // movendo a rainha 8 casas a esquerda
 
-printf("Movendo a Rainha\n");
+printf("\n Movendo a Rainha\n");
 do{
-printf("Esquerda\n");
+printf(" Esquerda\n");
 rainha++;
 } while (rainha < 8);
 rainha++;
@@ -34,9 +34,11 @@ while (movecavalo--)
     for(int i = 0; i < 2; i++){
         printf("Baixo\n"); //imprime paracima 2x
     }
-    printf("Direita\n"); //imprime para direitra 1x
+        printf("Direita\n"); //imprime para direitra 1x
 }
 return 0;
+
+
 
 }
 
