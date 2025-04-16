@@ -2,6 +2,7 @@
 int main(){
 
 int torre = 0, bispo = 0, rainha = 0;
+int movecavalo = 1;
 
 //move a torre 5 casas a direita
 printf("Movendo a Torre\n");
@@ -24,8 +25,20 @@ printf("Esquerda\n");
 rainha++;
 } while (rainha < 8);
 rainha++;
+
+// movimento do cavalo
+printf("\n movendo o cavalo\n");
+
+while (movecavalo--)
+{
+    for(int i = 0; i < 2; i++){
+        printf("Baixo\n"); //imprime paracima 2x
+    }
+    printf("Direita\n"); //imprime para direitra 1x
+}
 return 0;
 
-
 }
+
+
 
