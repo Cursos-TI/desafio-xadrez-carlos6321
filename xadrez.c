@@ -1,46 +1,50 @@
-#include  <stdio.h>
-int main(){
+#include<stdio.h>
 
-int torre = 0, bispo = 0, rainha = 0;
-int movecavalo = 1;
-
-//move a torre 5 casas a direita
-printf("\n Movendo a Torre\n");
-for (torre = 0; torre <5; torre++) {
+void movertorre(int casas){
+if(casas > 0){
+    
     printf("Direita\n");
+    movertorre(casas -1);
 }
-//movendo o bispo 5 casas diagonal á cima e á direita
-printf("\n Movendo o Bispo\n");
-
-while (bispo < 5)
-{
-    printf("Cima, Direita\n");
-    bispo++;
 }
-// movendo a rainha 8 casas a esquerda
 
-printf("\n Movendo a Rainha\n");
-do{
-printf(" Esquerda\n");
-rainha++;
-} while (rainha < 8);
-rainha++;
-
-// movimento do cavalo
-printf("\n movendo o cavalo\n");
-
-while (movecavalo--)
-{
-    for(int i = 0; i < 2; i++){
-        printf("Baixo\n"); //imprime para baixo 2x
+void movebispo(int casas){
+    if (casas > 0){
+        
+        printf("Cima, Direita\n");
+        movebispo(casas-1);
     }
-        printf("Direita\n"); //imprime para direita 1x
 }
+void moverainha(int casas){
+    if(casas > 0){
+        printf("Esquerda\n");
+        moverainha(casas-1);
+    }
+}
+void movercavalo(int casas){
+    if (casas > 0){
+        printf("Cima\n");
+        movercavalo(casas-1);
+    }
+}
+
+int main(){
+    printf("******Bem vindo ao Xadrex******\n");
+    printf("\n****Bom Jogo****\n");
+
+    printf("\nMovimento da Torre\n");
+movertorre (5);
+
+    printf("\nMovimento do Bispo\n");
+movebispo (5);
+
+printf("\nMovimento da Rainha\n");
+moverainha (8);
+
+printf("\nMovimento do cavalo\n");
+movercavalo (2);
+printf("Direita\n");
+
 return 0;
 
-
-
 }
-
-
-
